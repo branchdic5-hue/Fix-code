@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Day/Night Analysis</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 2rem; }
+      table { border-collapse: collapse; width: 100%; margin-bottom: 2rem; }
+      th, td { border: 1px solid #ccc; padding: 0.5rem; text-align: left; }
+      th { background: #f4f4f4; }
+    </style>
+  </head>
+  <body>
+    <h1>Day/Night Analysis - Case {{ case_id }}</h1>
+    <h2>Day Calls</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>A Party</th>
+          <th>B Party</th>
+          <th>Call Count</th>
+          <th>Total Duration (sec)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in analysis.day %}
+        <tr>
+          <td>{{ row.a_party }}</td>
+          <td>{{ row.b_party }}</td>
+          <td>{{ row.call_count }}</td>
+          <td>{{ row.total_duration }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <h2>Night Calls</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>A Party</th>
+          <th>B Party</th>
+          <th>Call Count</th>
+          <th>Total Duration (sec)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in analysis.night %}
+        <tr>
+          <td>{{ row.a_party }}</td>
+          <td>{{ row.b_party }}</td>
+          <td>{{ row.call_count }}</td>
+          <td>{{ row.total_duration }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

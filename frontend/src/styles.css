@@ -1,0 +1,97 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f5f7fb;
+  color: #1b1b1b;
+}
+
+.app header {
+  background: #1b3a57;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.app header h1 {
+  margin: 0 0 0.5rem 0;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+main {
+  padding: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-weight: 600;
+}
+
+input, select, textarea {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #c8d0da;
+  font-size: 1rem;
+}
+
+button {
+  background: #1e4bd1;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.message {
+  font-weight: 600;
+}
+
+.table {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  background: white;
+  padding: 0.6rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.table-row.header {
+  background: #e8eef7;
+  font-weight: 700;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+textarea {
+  min-height: 120px;
+}
