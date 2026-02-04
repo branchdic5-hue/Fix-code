@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tower Analysis</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 2rem; }
+      table { border-collapse: collapse; width: 100%; }
+      th, td { border: 1px solid #ccc; padding: 0.5rem; text-align: left; }
+      th { background: #f4f4f4; }
+    </style>
+  </head>
+  <body>
+    <h1>Tower Geo Analysis - Case {{ case_id }}</h1>
+    <p>Download full KML: <a href="/api/cases/{{ case_id }}/reports/tower-kml">tower_report.kml</a></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Cell ID</th>
+          <th>Lat</th>
+          <th>Lng</th>
+          <th>A Party</th>
+          <th>B Party</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in records %}
+        <tr>
+          <td>{{ row.cell_id }}</td>
+          <td>{{ row.lat }}</td>
+          <td>{{ row.lng }}</td>
+          <td>{{ row.a_party }}</td>
+          <td>{{ row.b_party }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CDR Reports</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 2rem; }
+      ul { line-height: 1.8; }
+      a { color: #1e4bd1; text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <h1>Case {{ case_id }} Reports</h1>
+    <ul>
+      <li><a href="/reports/{{ case_id }}/call-stats">Call Statistics Report</a></li>
+      <li><a href="/reports/{{ case_id }}/day-night">Day/Night Analysis Report</a></li>
+      <li><a href="/reports/{{ case_id }}/tower">Tower Geo Analysis</a></li>
+      <li><a href="/api/cases/{{ case_id }}/reports/tower-kml">Download KML</a></li>
+    </ul>
+  </body>
+</html>
